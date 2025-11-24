@@ -41,12 +41,14 @@ This workshop will get you set up to contribute to the [UD-DSSA website reposito
 You have two great options:
 
 **Option A: VS Code (Recommended for Beginners)**
+
 - Go to [code.visualstudio.com](https://code.visualstudio.com)
 - Download and install VS Code (default settings are fine)
 - Launch VS Code
 - **Why VS Code?** It's free, widely used, and has excellent Git integration built-in
 
 **Option B: Cursor AI (Cool AI Option Built on VS Code)**
+
 - Go to [cursor.com](https://cursor.com)
 - Sign up and download Cursor AI
 - **Note:** Cursor is built on VS Code, so most instructions work the same way
@@ -191,6 +193,7 @@ Cloning downloads your GitHub repository to your computer so you can edit files 
 6. VS Code will ask if you want to open the cloned repository - click "Open"
 
 **Alternative (Using Integrated Terminal):**
+
 1. Open VS Code/Cursor
 2. Open the integrated terminal: Press `` Ctrl + ` `` or click the terminal icon in the activity bar
 3. Navigate to your desired location: `cd C:\` (or your preferred folder)
@@ -234,6 +237,7 @@ This lets you see your changes in real-time before submitting them!
 This lets you easily get updates from the main repository. We'll add the original repository as "upstream" so you can pull the latest changes later.
 
 **What's the difference?**
+
 - **origin** = your fork (where you push your changes)
 - **upstream** = the original repository (where you pull updates from)
 
@@ -373,24 +377,29 @@ A pull request asks the repository maintainers to review and merge your changes 
 ## 🆘 Troubleshooting
 
 ### "Git is not recognized" or "node/npm is not recognized"
+
 - Make sure Git/Node.js is installed and added to your PATH
 - Restart VS Code/Cursor after installing (close and reopen the application)
 - Use the integrated terminal (`` Ctrl + ` ``) rather than an external terminal
 
 ### "Authentication failed"
+
 - You may need a Personal Access Token instead of password
 - GitHub → Settings → Developer settings → Personal access tokens → Generate new token
 - Use the token as your password when pushing
 
 ### "Branch is behind"
+
 - Pull latest changes: `git pull upstream main`, then `git push origin main`
 
 ### "Merge conflicts"
+
 - Don't panic! VS Code has a visual merge conflict editor
 - Look for conflict markers: `<<<<<<<`, `=======`, `>>>>>>>`
 - Choose which version to keep, or combine both, then save and commit
 
 ### "npm install fails" or "package errors"
+
 - Verify Node.js 18+: `node --version`
 - Try deleting `node_modules` and `package-lock.json`, then run `npm install` again
 - Check that you're in the correct project directory
@@ -434,6 +443,7 @@ After this workshop, you can:
 ## 🎉 Congratulations!
 
 You've learned the basics of Git and GitHub! These skills are essential for:
+
 - Contributing to open-source projects
 - Collaborating on team projects
 - Building your developer portfolio
