@@ -1,0 +1,447 @@
+---
+title: "DSSA Member Portfolio Workshop"
+subtitle: "Git & GitHub Basics for Contributing to the DSSA Website"
+format: 
+  html: default
+execute:
+  echo: true
+  eval: false
+---
+
+# 🚀 DSSA Member Portfolio Workshop
+
+## Workshop Details
+
+**Want your name featured on the official DSSA website—and get a gentle, beginner-friendly intro to GitHub and version control? This is your chance.**
+
+**Free lunch included!! 🍕🔥**
+
+📅 **Wednesday, December 3rd, 2025**
+
+🕛 **12:00–1:30pm**
+
+📍 **FinTech 301**
+
+**No sign-up. No pressure. Just show up.**
+
+We want you there—meet the team, learn the workflow we actually use, and hear about an exciting internship opportunity we can't wait to share.
+
+**Come for the pizza, stay for the career upgrade.**
+
+---
+
+## Workshop Overview
+
+This workshop will get you set up to contribute to the [UD-DSSA website repository](https://github.com/bluehen-tech/ud-dssa-website), which controls the very cool website at [https://bluehen-dssa.org/](https://bluehen-dssa.org/). You'll learn the basics of Git and GitHub—tools that are essential for any developer or data scientist.
+
+## Part 1: Essential Setup ⚙️
+
+### 1. 📝 Choose Your Code Editor
+
+You have two great options:
+
+**Option A: VS Code (Recommended for Beginners)**
+- Go to [code.visualstudio.com](https://code.visualstudio.com)
+- Download and install VS Code (default settings are fine)
+- Launch VS Code
+- **Why VS Code?** It's free, widely used, and has excellent Git integration built-in
+
+**Option B: Cursor AI (Cool AI Option Built on VS Code)**
+- Go to [cursor.com](https://cursor.com)
+- Sign up and download Cursor AI
+- **Note:** Cursor is built on VS Code, so most instructions work the same way
+- **Why Cursor?** It includes AI assistance for coding, which can be helpful
+- **🎓 Student Discount:** University students get Cursor Pro free for one year! Apply at [cursor.com/students](https://cursor.com/students)
+
+**💡 For this workshop, we'll use VS Code, but the steps work the same in Cursor!**
+
+### 1.5. 🎛️ Getting Familiar with VS Code/Cursor
+
+**The Activity Bar** (left side of the screen) is your best friend! It gives you quick access to everything you need:
+
+- 📁 **Explorer** - Browse and edit files in your project
+- 🔍 **Search** - Find text across all files
+- 🌿 **Source Control** - Manage Git commits, branches, and pushes (we'll use this a lot!)
+- 🔌 **Extensions** - Install helpful add-ons
+- **Terminal icon** - Opens the integrated terminal (or press `` Ctrl + ` ``)
+
+**Why this simplifies your life:** Everything you need is in one place—no switching between windows! The integrated terminal opens right inside your editor, so you can run commands while viewing your code. This is much easier than juggling separate terminal windows.
+
+### 2. 🔧 Install Git
+
+Git is version control software that tracks changes to your files—like "Track Changes" in Word, but for code!
+
+**Installation Steps:**
+
+1. **Download Git:**
+   - Go to [git-scm.com/downloads](https://git-scm.com/downloads)
+   - Download Git for Windows (or your operating system)
+   - Run the installer
+
+2. **Installation Settings (use defaults, but here's what to expect):**
+   - Click "Next" through most screens
+   - **Editor selection:** Choose VS Code (or Cursor if you're using that)
+   - **Default branch name:** Use "main" (this is the modern standard)
+   - **Line ending conversion:** Choose "Checkout as-is, commit Unix-style line endings" (recommended)
+   - Click "Install" and wait for completion
+
+3. **Verify Installation:**
+   - Open VS Code/Cursor (if not already open)
+   - Open the integrated terminal: Press `` Ctrl + ` `` (backtick key, usually under Esc) or click the terminal icon in the activity bar
+   - Type: `git --version`
+   - You should see something like `git version 2.x.x`
+   - If you see an error, restart VS Code/Cursor (Git may need to be added to PATH)
+
+### 3. ⚙️ Configure Git
+
+Before you can use Git, you need to tell it who you are:
+
+1. **Open the integrated terminal in VS Code/Cursor:** Press `` Ctrl + ` `` (backtick key, usually under Esc) or click the terminal icon in the activity bar
+
+2. **Set your name:**
+   ```
+   git config --global user.name "Your Full Name"
+   ```
+   Example: `git config --global user.name "John Smith"`
+
+3. **Set your email:**
+   ```
+   git config --global user.email "your.email@udel.edu"
+   ```
+   **Important:** Use your **udel.edu email** (the same one you'll use for GitHub)
+
+4. **Verify your settings:**
+   ```
+   git config --global --list
+   ```
+   You should see your name and email listed.
+
+### 4. 📦 Install Node.js
+
+Node.js lets you run JavaScript on your computer. The DSSA website needs it to install dependencies and run locally so you can test your changes.
+
+**Installation Steps:**
+
+1. **Download Node.js:**
+   - Go to [nodejs.org](https://nodejs.org)
+   - Download the **LTS (Long Term Support)** version (recommended)
+   - **Important:** The DSSA website requires **Node.js 18 or higher**
+   - Choose the installer for your operating system (Windows/Mac/Linux)
+
+2. **Run the Installer:**
+   - Double-click the downloaded file
+   - Click "Next" through the installation wizard
+   - **Use default settings** - they're fine for this workshop
+   - The installer will also install **npm** (Node Package Manager) automatically
+
+3. **Verify Installation:**
+   - Open the integrated terminal in VS Code/Cursor: Press `` Ctrl + ` `` (backtick key, usually under Esc) or click the terminal icon in the activity bar
+   - Type: `node --version` (should show `v18.x.x` or higher)
+   - Type: `npm --version` (should show `9.x.x` or higher)
+   - If you see errors, restart VS Code/Cursor and try again
+
+**💡 Note:** npm (Node Package Manager) comes with Node.js and is used to install project dependencies.
+
+### 5. 🔗 Create GitHub Account
+
+1. Go to [github.com](https://github.com)
+2. Click "Sign up"
+3. **Use your udel.edu email** for consistency
+4. Choose a username (this will be part of your GitHub profile URL)
+5. Verify your email address
+
+**💡 Pro Tip:** Your GitHub username will be visible on contributions, so choose something professional!
+
+### 6. 🔌 Install Recommended VS Code Extensions
+
+Extensions add extra features to VS Code. To install: Press `Ctrl+Shift+X`, search for the extension name, then click "Install".
+
+**Essential Extensions:**
+
+1. **GitLens** (by GitKraken) - Shows Git history and who wrote each line of code
+2. **Prettier - Code formatter** (by Prettier) - Automatically formats your code on save
+3. **ESLint** (by Microsoft) - Finds and highlights code errors automatically
+
+**💡 Tip:** When VS Code asks to format on save after installing Prettier/ESLint, click "Yes"! You can install other extensions later as needed.
+
+## Part 2: Getting the DSSA Website Repository 📥
+
+### 7. 🔄 Fork the Repository
+
+Forking creates your own copy of the repository on GitHub where you can make changes safely.
+
+1. Go to [https://github.com/bluehen-tech/ud-dssa-website](https://github.com/bluehen-tech/ud-dssa-website)
+2. **Make sure you're logged in** to GitHub
+3. Click the **"Fork"** button (top right)
+4. Choose your account and click "Create fork"
+
+### 8. 📥 Clone Your Fork
+
+Cloning downloads your GitHub repository to your computer so you can edit files locally.
+
+**Using VS Code UI (Easiest Method):**
+
+1. Open VS Code
+2. **Option A:** Click the **"Clone Git Repository"** button on the welcome screen (if visible)
+   **Option B:** Press `Ctrl+Shift+P` to open the command palette, or click **View → Command Palette** in the menu
+3. Type "Git: Clone" and press Enter
+4. Paste your forked repository URL: `https://github.com/YOUR_USERNAME/ud-dssa-website`
+   - Replace `YOUR_USERNAME` with your actual GitHub username
+5. Choose where to save locally (e.g., `C:\` or `C:\Users\YourName\Documents`)
+6. VS Code will ask if you want to open the cloned repository - click "Open"
+
+**Alternative (Using Integrated Terminal):**
+1. Open VS Code/Cursor
+2. Open the integrated terminal: Press `` Ctrl + ` `` or click the terminal icon in the activity bar
+3. Navigate to your desired location: `cd C:\` (or your preferred folder)
+4. Run: `git clone https://github.com/YOUR_USERNAME/ud-dssa-website.git`
+5. Navigate into the folder: `cd ud-dssa-website`
+6. The folder is already open in VS Code/Cursor!
+
+### 9. 📦 Install Project Dependencies
+
+1. **Open the integrated terminal in VS Code/Cursor:** Press `` Ctrl + ` `` (backtick key, usually under Esc) or click the terminal icon in the activity bar
+   - Make sure you're in the project folder: `cd ud-dssa-website`
+   - Check your location: `pwd` (Mac/Linux) or `cd` (Windows)
+
+2. **Install dependencies:**
+   ```
+   npm install
+   ```
+   - This downloads all required packages (Next.js, React, etc.)
+   - **This may take a few minutes** - be patient!
+   - When done, you'll see a `node_modules` folder (don't commit this - it's in `.gitignore`)
+
+### 10. 🚀 Run the Development Server (Optional but Recommended)
+
+This lets you see your changes in real-time before submitting them!
+
+1. **In the integrated terminal** (make sure you're in the `ud-dssa-website` folder), type:
+   ```
+   npm run dev
+   ```
+
+2. **Wait for the server to start** - you'll see "Local: http://localhost:3000"
+
+3. **Open your browser** to [http://localhost:3000](http://localhost:3000) to see the website locally
+
+4. **To stop the server:** Press `Ctrl+C` in the terminal
+
+**💡 Tip:** Keep the dev server running while you work - changes will auto-refresh in your browser!
+
+### 11. 🔗 Connect to Original Repository (Optional but Recommended)
+
+This lets you easily get updates from the main repository. We'll add the original repository as "upstream" so you can pull the latest changes later.
+
+**What's the difference?**
+- **origin** = your fork (where you push your changes)
+- **upstream** = the original repository (where you pull updates from)
+
+1. **Open the integrated terminal in VS Code/Cursor:** Press `` Ctrl + ` `` or click the terminal icon in the activity bar
+2. Add the original repository as "upstream":
+   ```
+   git remote add upstream https://github.com/bluehen-tech/ud-dssa-website.git
+   ```
+3. Verify: `git remote -v` (should show both `origin` and `upstream`)
+
+## Part 3: Making Your First Contribution 🎯
+
+### 12. 🌿 Create a Branch
+
+A branch is a separate workspace where you can make changes without affecting the main code.
+
+**Using VS Code UI (Recommended):**
+
+1. Click the **Source Control icon** (🌿) in the activity bar (or press `Ctrl+Shift+G`)
+2. Click the branch name at the bottom left (probably says "main")
+3. Click "Create new branch"
+4. Name it something descriptive like: `add-my-portfolio` or `update-member-info`
+5. Press Enter
+
+**Alternative (Terminal):** Open integrated terminal and run `git checkout -b your-branch-name`
+
+### 13. ✏️ Make Your Changes
+
+**For this workshop, let's add your portfolio information:**
+
+1. In VS Code, use the **Explorer** (📁 icon) to navigate the project
+2. Look for a `members` or `portfolios` folder, or files in `src/data/` directory
+3. **Create a new file** or edit an existing template:
+   - Right-click in the appropriate folder → "New File"
+   - Name it something like: `your-name.md` or `your-username.md`
+4. Add your information (ask a workshop leader for the exact format if needed):
+   ```markdown
+   # Your Name
+   
+   ## About Me
+   [Add a brief bio about yourself]
+   
+   ## Interests
+   [List your interests in data science, analytics, etc.]
+   
+   ## Contact
+   [Your email or GitHub profile]
+   ```
+5. **💾 Save your file:** Press `Ctrl+S`
+
+### 14. 💾 Commit Your Changes
+
+A commit saves a snapshot of your changes with a message describing what you did.
+
+1. Click the **Source Control icon** (🌿) in the activity bar (or press `Ctrl+Shift+G`)
+2. You'll see your modified/new file in the "Changes" section
+3. Click the **"+"** next to your file to **stage** it (staging tells Git which files to include in the commit)
+4. In the message box at the top, write a clear commit message (e.g., "Add my portfolio information")
+5. Click the **"✓" (checkmark)** button to commit (or press `Ctrl+Enter`)
+
+**💡 Tip:** Commit often! Each commit is like a save point you can return to.
+
+### 15. 📤 Push to GitHub
+
+Push uploads your local commits to your GitHub repository.
+
+**Using VS Code UI (Recommended):**
+
+1. In the Source Control panel (click 🌿 icon in activity bar or press `Ctrl+Shift+G`), click the **"..."** (three dots) menu at the top
+2. Click **"Push"** (or look for a sync/upload icon)
+3. VS Code may ask you to authenticate - follow the prompts to sign in to GitHub
+   - You may need to generate a Personal Access Token (GitHub will guide you)
+4. Your changes are now on GitHub!
+
+**Alternative (Terminal):** Open integrated terminal and run `git push origin your-branch-name`
+
+### 16. 🔄 Create a Pull Request
+
+A pull request asks the repository maintainers to review and merge your changes into the main project.
+
+1. Go to your forked repository on GitHub: `https://github.com/YOUR_USERNAME/ud-dssa-website`
+2. You should see a banner saying "your-branch-name had recent pushes"
+3. Click **"Compare & pull request"**
+4. Fill in the details:
+   - **Title:** Something like "Add [Your Name] portfolio"
+   - **Description:** Briefly describe what you added/changed
+5. Click **"Create pull request"**
+6. **That's it!** The DSSA team will review your contribution. 🎉
+
+## Part 4: Essential Git Workflow 🔄
+
+### 17. 📥 Getting Updates & Future Contributions
+
+**Keeping your fork up to date:**
+
+1. Switch to `main` branch: Click the branch name at bottom left → select "main" (or use Source Control panel)
+2. **Open the integrated terminal:** Press `` Ctrl + ` `` or click the terminal icon in the activity bar
+3. Pull updates from the original repository and push to your fork:
+   ```
+   git pull upstream main
+   git push origin main
+   ```
+   **Alternative:** Use GitHub's "Sync fork" button on your repository page
+
+**Workflow for future contributions:**
+
+1. **Update your fork:** Switch to `main` branch → `git pull upstream main` → `git push origin main` (or use GitHub's "Sync fork" button)
+2. **Create a new branch:** Click branch name at bottom left → "Create new branch" (or use terminal: `git checkout -b your-feature-name`)
+3. **Make your changes** (edit files, save with `Ctrl+S`)
+4. **Test locally (optional):** In terminal, run `npm run dev` → visit http://localhost:3000
+5. **Commit:** In Source Control panel, stage files (click "+"), write message, click "✓" (or use terminal: `git add .` → `git commit -m "message"`)
+6. **Push:** In Source Control panel, click "..." → "Push" (or use terminal: `git push origin your-feature-name`)
+7. **Create a pull request** on GitHub
+8. **Wait for review** and celebrate when merged! 🎉
+
+## Quick Reference Guide 📋
+
+### Essential Git Commands (Terminal) & UI Alternatives
+
+- `git status` - See what files have changed (or check Source Control panel)
+- `git add .` - Stage all changes (or click "+" next to files in Source Control)
+- `git commit -m "Your message"` - Commit with a message (or use Source Control: stage files, write message, click "✓")
+- `git push` - Upload to GitHub (or Source Control → "..." → "Push")
+- `git pull` - Download from GitHub (or Source Control → "..." → "Pull")
+- `git checkout -b branch-name` - Create and switch to new branch (or click branch name → "Create new branch")
+- `git checkout branch-name` - Switch to existing branch (or click branch name → select branch)
+
+### VS Code Shortcuts & UI Access
+
+- **Terminal:** `` Ctrl + ` `` or click terminal icon in activity bar
+- **Save file:** `Ctrl+S` or File → Save
+- **Source Control:** `Ctrl+Shift+G` or click 🌿 icon in activity bar
+- **Command Palette:** `Ctrl+Shift+P` or View → Command Palette
+- **Explorer:** Click 📁 icon in activity bar
+- **Extensions:** `Ctrl+Shift+X` or click 🔌 icon in activity bar
+
+## 🆘 Troubleshooting
+
+### "Git is not recognized" or "node/npm is not recognized"
+- Make sure Git/Node.js is installed and added to your PATH
+- Restart VS Code/Cursor after installing (close and reopen the application)
+- Use the integrated terminal (`` Ctrl + ` ``) rather than an external terminal
+
+### "Authentication failed"
+- You may need a Personal Access Token instead of password
+- GitHub → Settings → Developer settings → Personal access tokens → Generate new token
+- Use the token as your password when pushing
+
+### "Branch is behind"
+- Pull latest changes: `git pull upstream main`, then `git push origin main`
+
+### "Merge conflicts"
+- Don't panic! VS Code has a visual merge conflict editor
+- Look for conflict markers: `<<<<<<<`, `=======`, `>>>>>>>`
+- Choose which version to keep, or combine both, then save and commit
+
+### "npm install fails" or "package errors"
+- Verify Node.js 18+: `node --version`
+- Try deleting `node_modules` and `package-lock.json`, then run `npm install` again
+- Check that you're in the correct project directory
+
+## 🎯 Next Steps
+
+After this workshop, you can:
+
+- ✅ Contribute to the DSSA website
+- ✅ Add your portfolio to the member pages
+- ✅ Help improve documentation
+- ✅ Fix bugs or add features
+- ✅ Build your GitHub portfolio (employers love this!)
+
+## 📚 Additional Resources
+
+- **GitHub Guides:** [guides.github.com](https://guides.github.com)
+- **Git Documentation:** [git-scm.com/doc](https://git-scm.com/doc)
+- **VS Code Git Tutorial:** Built-in help in VS Code
+- **DSSA Website Repo:** [github.com/bluehen-tech/ud-dssa-website](https://github.com/bluehen-tech/ud-dssa-website)
+
+## ✅ Workshop Checklist
+
+- [ ] VS Code (or Cursor) installed
+- [ ] Recommended VS Code extensions installed (GitLens, Prettier, ESLint)
+- [ ] Git installed and verified (`git --version`)
+- [ ] Git configured with name and email
+- [ ] Node.js 18+ installed and verified (`node --version`)
+- [ ] npm verified (`npm --version`)
+- [ ] GitHub account created
+- [ ] DSSA repository forked
+- [ ] Repository cloned to local computer
+- [ ] Project dependencies installed (`npm install`)
+- [ ] Development server tested (optional: `npm run dev`)
+- [ ] Branch created for your changes
+- [ ] Changes made and saved
+- [ ] Changes committed
+- [ ] Changes pushed to GitHub
+- [ ] Pull request created
+
+## 🎉 Congratulations!
+
+You've learned the basics of Git and GitHub! These skills are essential for:
+- Contributing to open-source projects
+- Collaborating on team projects
+- Building your developer portfolio
+- Working in tech and data science roles
+
+**Questions?** Ask during the workshop or reach out to the DSSA team!
+
+---
+
+**Remember:** Come for the pizza, stay for the career upgrade! 🍕🚀
+
