@@ -2,9 +2,12 @@
 
 Workshop materials for the DSSA Member Portfolio Workshop - Git & GitHub Basics for Contributing to the DSSA Website.
 
+🔗 **Repository**: [https://github.com/bluehen-tech/techStackSetup](https://github.com/bluehen-tech/techStackSetup)  
+🌐 **Live Site**: [https://bluehen-tech.github.io/techStackSetup/](https://bluehen-tech.github.io/techStackSetup/)
+
 ## 📖 About This Repository
 
-This repository contains the workshop guide (`index.qmd`) that teaches DSSA members how to contribute to the UD-DSSA website using Git and GitHub. The guide is written in Quarto (`.qmd` format) and rendered as HTML for display on GitHub Pages.
+This repository contains the workshop guide (`index.qmd`) that teaches DSSA members how to contribute to the UD-DSSA website using Git and GitHub. The guide is written in Quarto (`.qmd` format) and rendered as HTML for display on GitHub Pages. The rendered site is available at [https://bluehen-tech.github.io/techStackSetup/](https://bluehen-tech.github.io/techStackSetup/).
 
 ## 🛠️ Prerequisites
 
@@ -54,8 +57,8 @@ You should see something like `1.4.x` or higher.
 
 1. **Clone this repository** (if you haven't already):
    ```bash
-   git clone https://github.com/YOUR_USERNAME/BlueHenDSSATechStack.git
-   cd BlueHenDSSATechStack
+   git clone https://github.com/bluehen-tech/techStackSetup.git
+   cd techStackSetup
    ```
 
 2. **Open the project in VS Code/Cursor**
@@ -78,7 +81,7 @@ To generate the final HTML file that will be displayed on GitHub Pages:
 
 2. **Make sure you're in the project directory**:
    ```bash
-   cd BlueHenDSSATechStack
+   cd techStackSetup
    ```
 
 3. **Render the HTML**:
@@ -116,7 +119,7 @@ The rendered `index.html` file is automatically displayed on the GitHub Pages si
    git push origin main
    ```
 
-5. **GitHub Pages will automatically update** - Usually takes a few minutes
+5. **GitHub Pages will automatically update** - Usually takes a few minutes. View the live site at [https://bluehen-tech.github.io/techStackSetup/](https://bluehen-tech.github.io/techStackSetup/)
 
 ## 📝 Workflow Summary
 
@@ -153,7 +156,7 @@ git push origin main
 ### File Structure
 
 ```
-BlueHenDSSATechStack/
+techStackSetup/
 ├── index.qmd          # Source file (edit this!)
 ├── index.html         # Rendered output (auto-generated)
 ├── index_files/       # Supporting files (auto-generated)
@@ -165,7 +168,7 @@ BlueHenDSSATechStack/
 - **Always render before committing** - Make sure `index.html` is up to date
 - **Preview locally first** - Use `quarto preview` to catch formatting issues
 - **Commit both `.qmd` and `.html`** - The source file and rendered output should be in sync
-- **Check GitHub Pages** - After pushing, wait a few minutes and check the live site
+- **Check GitHub Pages** - After pushing, wait a few minutes and check the live site at [https://bluehen-tech.github.io/techStackSetup/](https://bluehen-tech.github.io/techStackSetup/)
 
 ## 🆘 Troubleshooting
 
